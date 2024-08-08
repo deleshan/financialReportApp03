@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D25262EC-2DB4-4ED3-B02C-6C2ED6268618}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>financialReportApp03</RootNamespace>
+    <AssemblyName>financialReportApp03</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalanceSheetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BalanceSheetControl.Designer.cs">
+      <DependentUpon>BalanceSheetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearDatabaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClearDatabaseControl.Designer.cs">
+      <DependentUpon>ClearDatabaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreditorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreditorsControl.Designer.cs">
+      <DependentUpon>CreditorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DebtorsControl.Designer.cs">
+      <DependentUpon>DebtorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquityControl.Designer.cs">
+      <DependentUpon>EquityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpenseControl.Designer.cs">
+      <DependentUpon>ExpenseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinActControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinActControl.Designer.cs">
+      <DependentUpon>FinActControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InventoryControl.Designer.cs">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherIncomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OtherIncomeControl.Designer.cs">
+      <DependentUpon>OtherIncomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherPurchaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OtherPurchaseControl.Designer.cs">
+      <DependentUpon>OtherPurchaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentsControl.Designer.cs">
+      <DependentUpon>PaymentsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitOrLossControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfitOrLossControl.Designer.cs">
+      <DependentUpon>ProfitOrLossControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LogInControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogInControl.Designer.cs">
+      <DependentUpon>LogInControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PurchaseControl.Designer.cs">
+      <DependentUpon>PurchaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesControl.Designer.cs">
+      <DependentUpon>SalesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignUpControl.Designer.cs">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaxControl.Designer.cs">
+      <DependentUpon>TaxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionsControl.Designer.cs">
+      <DependentUpon>TransactionsControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BalanceSheetControl.resx">
+      <DependentUpon>BalanceSheetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearDatabaseControl.resx">
+      <DependentUpon>ClearDatabaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditorsControl.resx">
+      <DependentUpon>CreditorsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtorsControl.resx">
+      <DependentUpon>DebtorsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquityControl.resx">
+      <DependentUpon>EquityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseControl.resx">
+      <DependentUpon>ExpenseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinActControl.resx">
+      <DependentUpon>FinActControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryControl.resx">
+      <DependentUpon>InventoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInControl.resx">
+      <DependentUpon>LogInControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherIncomeControl.resx">
+      <DependentUpon>OtherIncomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherPurchaseControl.resx">
+      <DependentUpon>OtherPurchaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsControl.resx">
+      <DependentUpon>PaymentsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitOrLossControl.resx">
+      <DependentUpon>ProfitOrLossControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseControl.resx">
+      <DependentUpon>PurchaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesControl.resx">
+      <DependentUpon>SalesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpControl.resx">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxControl.resx">
+      <DependentUpon>TaxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionsControl.resx">
+      <DependentUpon>TransactionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-48 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
